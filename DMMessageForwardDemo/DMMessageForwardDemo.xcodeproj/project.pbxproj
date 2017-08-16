@@ -16,6 +16,9 @@
 		6B52B5CD1F442BBB006351AD /* DMLearnViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B52B5CC1F442BBB006351AD /* DMLearnViewController.m */; };
 		6B52B5D11F442CCF006351AD /* DMLearnObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B52B5D01F442CCF006351AD /* DMLearnObject.m */; };
 		6B52B5D41F442CFD006351AD /* DMForwardObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B52B5D31F442CFD006351AD /* DMForwardObject.m */; };
+		6B52B5DB1F443BE6006351AD /* DMNumberTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B52B5DA1F443BE6006351AD /* DMNumberTableViewController.m */; };
+		6B52B5E11F443D50006351AD /* LLForwardProxyCenter.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B52B5E01F443D50006351AD /* LLForwardProxyCenter.m */; };
+		6B52B5E41F443E30006351AD /* DMScrollIndicator.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B52B5E31F443E30006351AD /* DMScrollIndicator.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -35,6 +38,12 @@
 		6B52B5D01F442CCF006351AD /* DMLearnObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DMLearnObject.m; sourceTree = "<group>"; };
 		6B52B5D21F442CFD006351AD /* DMForwardObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DMForwardObject.h; sourceTree = "<group>"; };
 		6B52B5D31F442CFD006351AD /* DMForwardObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DMForwardObject.m; sourceTree = "<group>"; };
+		6B52B5D91F443BE6006351AD /* DMNumberTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DMNumberTableViewController.h; sourceTree = "<group>"; };
+		6B52B5DA1F443BE6006351AD /* DMNumberTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DMNumberTableViewController.m; sourceTree = "<group>"; };
+		6B52B5DF1F443D50006351AD /* LLForwardProxyCenter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LLForwardProxyCenter.h; sourceTree = "<group>"; };
+		6B52B5E01F443D50006351AD /* LLForwardProxyCenter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LLForwardProxyCenter.m; sourceTree = "<group>"; };
+		6B52B5E21F443E30006351AD /* DMScrollIndicator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DMScrollIndicator.h; sourceTree = "<group>"; };
+		6B52B5E31F443E30006351AD /* DMScrollIndicator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DMScrollIndicator.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -67,6 +76,8 @@
 		6B52B5B31F442957006351AD /* DMMessageForwardDemo */ = {
 			isa = PBXGroup;
 			children = (
+				6B52B5E51F444903006351AD /* AvoidCrash */,
+				6B52B5D51F4435A6006351AD /* ProxyForward */,
 				6B52B5CE1F442C6D006351AD /* MessageForwardLearn */,
 				6B52B5B71F442957006351AD /* AppDelegate.h */,
 				6B52B5B81F442957006351AD /* AppDelegate.m */,
@@ -100,6 +111,26 @@
 				6B52B5D31F442CFD006351AD /* DMForwardObject.m */,
 			);
 			name = MessageForwardLearn;
+			sourceTree = "<group>";
+		};
+		6B52B5D51F4435A6006351AD /* ProxyForward */ = {
+			isa = PBXGroup;
+			children = (
+				6B52B5DF1F443D50006351AD /* LLForwardProxyCenter.h */,
+				6B52B5E01F443D50006351AD /* LLForwardProxyCenter.m */,
+				6B52B5D91F443BE6006351AD /* DMNumberTableViewController.h */,
+				6B52B5DA1F443BE6006351AD /* DMNumberTableViewController.m */,
+				6B52B5E21F443E30006351AD /* DMScrollIndicator.h */,
+				6B52B5E31F443E30006351AD /* DMScrollIndicator.m */,
+			);
+			path = ProxyForward;
+			sourceTree = "<group>";
+		};
+		6B52B5E51F444903006351AD /* AvoidCrash */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = AvoidCrash;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -175,8 +206,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				6B52B5D11F442CCF006351AD /* DMLearnObject.m in Sources */,
+				6B52B5DB1F443BE6006351AD /* DMNumberTableViewController.m in Sources */,
+				6B52B5E11F443D50006351AD /* LLForwardProxyCenter.m in Sources */,
 				6B52B5CD1F442BBB006351AD /* DMLearnViewController.m in Sources */,
 				6B52B5BC1F442957006351AD /* ViewController.m in Sources */,
+				6B52B5E41F443E30006351AD /* DMScrollIndicator.m in Sources */,
 				6B52B5B91F442957006351AD /* AppDelegate.m in Sources */,
 				6B52B5B61F442957006351AD /* main.m in Sources */,
 				6B52B5D41F442CFD006351AD /* DMForwardObject.m in Sources */,
