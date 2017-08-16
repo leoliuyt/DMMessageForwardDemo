@@ -29,7 +29,7 @@
     self.automaticallyAdjustsScrollViewInsets = YES;
     self.scrollIndicator = [[DMScrollIndicator alloc] initWithFrame:CGRectMake(kScreenW - 40, 64, 40, 20)];
     self.forwardProxyCenter = [[LLForwardProxyCenter alloc] init];
-    self.forwardProxyCenter.forwardDelegates = @[self,self.scrollIndicator];
+    self.forwardProxyCenter.targets = @[self,self.scrollIndicator];
     self.tableView.delegate = (id)self.forwardProxyCenter;
     self.tableView.dataSource = self;
     self.heights = @[

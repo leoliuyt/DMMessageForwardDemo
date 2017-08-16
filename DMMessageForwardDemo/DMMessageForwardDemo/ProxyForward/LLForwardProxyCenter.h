@@ -8,8 +8,12 @@
 
 #import <Foundation/Foundation.h>
 
-@interface LLForwardProxyCenter : NSObject
+@interface LLForwardProxyCenter : NSProxy
 
-@property (nonatomic, strong) NSArray* forwardDelegates;
+@property (nonatomic, copy) NSArray* targets;
+
+- (instancetype)init;
+- (instancetype)initWithTarget:(id)target;
++ (instancetype)proxyWithTarget:(id)target;
 
 @end

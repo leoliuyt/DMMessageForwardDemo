@@ -16,17 +16,28 @@
 
 @implementation LLForwardProxyCenter
 
-- (void)setForwardDelegates:(NSArray *)forwardDelegates{
+- (instancetype)initWithTarget:(id)target{
+    [self setTargets:@[target]];
+    return self;
+}
+
++ (instancetype)proxyWithTarget:(id)target{
+    return [[self alloc] initWithTarget:target];
+}
+
+- (instancetype)init
+{
+    return self;
+}
+
+- (void)setTargets:(NSArray *)targets{
     self.weakRefTargets = [NSPointerArray weakObjectsPointerArray];
-    for (id delegate in forwardDelegates) {
+    for (id delegate in targets) {
         [self.weakRefTargets addPointer:(__bridge void *)delegate];
     }
 }
 
 - (BOOL)respondsToSelector:(SEL)aSelector{
-    if ([super respondsToSelector:aSelector]) {
-        return YES;
-    }
     for (id target in self.weakRefTargets) {
         if ([target respondsToSelector:aSelector]) {
             return YES;
@@ -36,15 +47,12 @@
 }
 
 - (NSMethodSignature *)methodSignatureForSelector:(SEL)aSelector{
-    NSMethodSignature *sig = [super methodSignatureForSelector:aSelector];
-    if (!sig) {
-        for (id target in self.weakRefTargets) {
-            if ((sig = [target methodSignatureForSelector:aSelector])) {
-                break;
-            }
+    NSMethodSignature *sig = nil;
+    for (id target in self.weakRefTargets) {
+        if ((sig = [target methodSignatureForSelector:aSelector])) {
+            break;
         }
     }
-    
     return sig;
 }
 

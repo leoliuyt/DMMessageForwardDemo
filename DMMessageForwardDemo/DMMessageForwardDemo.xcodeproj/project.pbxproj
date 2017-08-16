@@ -21,6 +21,7 @@
 		6B52B5E41F443E30006351AD /* DMScrollIndicator.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B52B5E31F443E30006351AD /* DMScrollIndicator.m */; };
 		6B52B5E81F444B2C006351AD /* NSObject+LLAvoidCrash.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B52B5E71F444B2C006351AD /* NSObject+LLAvoidCrash.m */; };
 		6B52B5F01F445982006351AD /* DMAvoidCrashViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B52B5EF1F445982006351AD /* DMAvoidCrashViewController.m */; };
+		9E0C84851F44751E00ED6F79 /* DMTimerDeallocViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9E0C84841F44751E00ED6F79 /* DMTimerDeallocViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -50,6 +51,8 @@
 		6B52B5E71F444B2C006351AD /* NSObject+LLAvoidCrash.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+LLAvoidCrash.m"; sourceTree = "<group>"; };
 		6B52B5EE1F445982006351AD /* DMAvoidCrashViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DMAvoidCrashViewController.h; sourceTree = "<group>"; };
 		6B52B5EF1F445982006351AD /* DMAvoidCrashViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DMAvoidCrashViewController.m; sourceTree = "<group>"; };
+		9E0C84831F44751E00ED6F79 /* DMTimerDeallocViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DMTimerDeallocViewController.h; sourceTree = "<group>"; };
+		9E0C84841F44751E00ED6F79 /* DMTimerDeallocViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DMTimerDeallocViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -82,6 +85,7 @@
 		6B52B5B31F442957006351AD /* DMMessageForwardDemo */ = {
 			isa = PBXGroup;
 			children = (
+				9E0C84821F4474F500ED6F79 /* Timer */,
 				6B52B5E51F444903006351AD /* AvoidCrash */,
 				6B52B5D51F4435A6006351AD /* ProxyForward */,
 				6B52B5CE1F442C6D006351AD /* MessageForwardLearn */,
@@ -141,6 +145,15 @@
 				6B52B5EF1F445982006351AD /* DMAvoidCrashViewController.m */,
 			);
 			path = AvoidCrash;
+			sourceTree = "<group>";
+		};
+		9E0C84821F4474F500ED6F79 /* Timer */ = {
+			isa = PBXGroup;
+			children = (
+				9E0C84831F44751E00ED6F79 /* DMTimerDeallocViewController.h */,
+				9E0C84841F44751E00ED6F79 /* DMTimerDeallocViewController.m */,
+			);
+			path = Timer;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -221,6 +234,7 @@
 				6B52B5CD1F442BBB006351AD /* DMLearnViewController.m in Sources */,
 				6B52B5BC1F442957006351AD /* ViewController.m in Sources */,
 				6B52B5E41F443E30006351AD /* DMScrollIndicator.m in Sources */,
+				9E0C84851F44751E00ED6F79 /* DMTimerDeallocViewController.m in Sources */,
 				6B52B5B91F442957006351AD /* AppDelegate.m in Sources */,
 				6B52B5F01F445982006351AD /* DMAvoidCrashViewController.m in Sources */,
 				6B52B5B61F442957006351AD /* main.m in Sources */,
