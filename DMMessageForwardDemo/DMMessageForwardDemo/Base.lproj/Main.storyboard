@@ -101,6 +101,9 @@
                                                 </label>
                                             </subviews>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <segue destination="Whc-hq-KVE" kind="show" id="af2-Ru-3uO"/>
+                                        </connections>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" textLabel="n5s-cD-NeD" detailTextLabel="Icj-3N-v5f" style="IBUITableViewCellStyleValue2" id="BKG-e2-z5I">
                                         <rect key="frame" x="0.0" y="88" width="375" height="44"/>
@@ -201,6 +204,37 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="84E-Bc-pzM" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1340" y="402"/>
+        </scene>
+        <!--Avoid Crash View Controller-->
+        <scene sceneID="faa-ZB-qwl">
+            <objects>
+                <viewController id="Whc-hq-KVE" customClass="DMAvoidCrashViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="aA3-HN-dat"/>
+                        <viewControllerLayoutGuide type="bottom" id="5m7-ga-hDb"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="vbv-X8-fD9">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Lhl-rJ-BMt">
+                                <rect key="frame" x="133" y="318" width="108" height="30"/>
+                                <state key="normal" title="调用不存在方法"/>
+                                <connections>
+                                    <action selector="invokeUnrecognize:" destination="Whc-hq-KVE" eventType="touchUpInside" id="jET-xO-5d2"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="Lhl-rJ-BMt" firstAttribute="centerX" secondItem="vbv-X8-fD9" secondAttribute="centerX" id="JCC-gW-h6z"/>
+                            <constraint firstItem="Lhl-rJ-BMt" firstAttribute="centerY" secondItem="vbv-X8-fD9" secondAttribute="centerY" id="kn7-Bf-FZO"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="qJy-5h-daE" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1993" y="44"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="Wor-RJ-uRB">

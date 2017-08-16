@@ -10,6 +10,8 @@
 
 @interface DMForwardObject : NSObject
 
++ (instancetype) sharedInstance;
+
 - (void)doExcept;
 
 @end

@@ -19,6 +19,8 @@
 		6B52B5DB1F443BE6006351AD /* DMNumberTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B52B5DA1F443BE6006351AD /* DMNumberTableViewController.m */; };
 		6B52B5E11F443D50006351AD /* LLForwardProxyCenter.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B52B5E01F443D50006351AD /* LLForwardProxyCenter.m */; };
 		6B52B5E41F443E30006351AD /* DMScrollIndicator.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B52B5E31F443E30006351AD /* DMScrollIndicator.m */; };
+		6B52B5E81F444B2C006351AD /* NSObject+LLAvoidCrash.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B52B5E71F444B2C006351AD /* NSObject+LLAvoidCrash.m */; };
+		6B52B5F01F445982006351AD /* DMAvoidCrashViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B52B5EF1F445982006351AD /* DMAvoidCrashViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -44,6 +46,10 @@
 		6B52B5E01F443D50006351AD /* LLForwardProxyCenter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LLForwardProxyCenter.m; sourceTree = "<group>"; };
 		6B52B5E21F443E30006351AD /* DMScrollIndicator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DMScrollIndicator.h; sourceTree = "<group>"; };
 		6B52B5E31F443E30006351AD /* DMScrollIndicator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DMScrollIndicator.m; sourceTree = "<group>"; };
+		6B52B5E61F444B2C006351AD /* NSObject+LLAvoidCrash.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+LLAvoidCrash.h"; sourceTree = "<group>"; };
+		6B52B5E71F444B2C006351AD /* NSObject+LLAvoidCrash.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+LLAvoidCrash.m"; sourceTree = "<group>"; };
+		6B52B5EE1F445982006351AD /* DMAvoidCrashViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DMAvoidCrashViewController.h; sourceTree = "<group>"; };
+		6B52B5EF1F445982006351AD /* DMAvoidCrashViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DMAvoidCrashViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -129,6 +135,10 @@
 		6B52B5E51F444903006351AD /* AvoidCrash */ = {
 			isa = PBXGroup;
 			children = (
+				6B52B5E61F444B2C006351AD /* NSObject+LLAvoidCrash.h */,
+				6B52B5E71F444B2C006351AD /* NSObject+LLAvoidCrash.m */,
+				6B52B5EE1F445982006351AD /* DMAvoidCrashViewController.h */,
+				6B52B5EF1F445982006351AD /* DMAvoidCrashViewController.m */,
 			);
 			path = AvoidCrash;
 			sourceTree = "<group>";
@@ -212,8 +222,10 @@
 				6B52B5BC1F442957006351AD /* ViewController.m in Sources */,
 				6B52B5E41F443E30006351AD /* DMScrollIndicator.m in Sources */,
 				6B52B5B91F442957006351AD /* AppDelegate.m in Sources */,
+				6B52B5F01F445982006351AD /* DMAvoidCrashViewController.m in Sources */,
 				6B52B5B61F442957006351AD /* main.m in Sources */,
 				6B52B5D41F442CFD006351AD /* DMForwardObject.m in Sources */,
+				6B52B5E81F444B2C006351AD /* NSObject+LLAvoidCrash.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

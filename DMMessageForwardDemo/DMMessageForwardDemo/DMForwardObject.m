@@ -11,6 +11,15 @@
 
 @implementation DMForwardObject
 
++ (instancetype) sharedInstance{
+    static DMForwardObject *unrecognizedSelectorSolveObject;
+    static dispatch_once_t  once_token;
+    dispatch_once(&once_token, ^{
+        unrecognizedSelectorSolveObject = [[DMForwardObject alloc] init];
+    });
+    return unrecognizedSelectorSolveObject;
+}
+
 - (void)doExcept
 {
     NSLog(@"%s",__FUNCTION__);

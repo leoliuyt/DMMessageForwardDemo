@@ -1,5 +1,5 @@
 //
-//  LLForwardProxyCenter.h
+//  NSObject+LLAvoidCrash.h
 //  DMMessageForwardDemo
 //
 //  Created by lbq on 2017/8/16.
@@ -8,8 +8,8 @@
 
 #import <Foundation/Foundation.h>
 
-@interface LLForwardProxyCenter : NSObject
+@interface NSObject (LLAvoidCrash)
 
-@property (nonatomic, strong) NSArray* forwardDelegates;
++ (void)launchAvoidCrach;
 
 @end
