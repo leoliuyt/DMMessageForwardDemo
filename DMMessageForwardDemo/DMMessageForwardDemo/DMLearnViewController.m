@@ -30,7 +30,8 @@
     DMLearnObject *learnObj = [DMLearnObject new];
 #pragma clang diagnostic push
 #pragma clang diagnostic ignored "-Warc-performSelector-leaks"
-    [learnObj performSelector:@selector(test)];
+//    [learnObj performSelector:@selector(test)];
+    [learnObj performSelector:@selector(doExcept)];
 #pragma clang diagnostic pop
     
 }
