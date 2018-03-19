@@ -28,12 +28,32 @@
 
 - (IBAction)invokeAction:(id)sender {
     DMLearnObject *learnObj = [DMLearnObject new];
-#pragma clang diagnostic push
-#pragma clang diagnostic ignored "-Warc-performSelector-leaks"
-//    [learnObj performSelector:@selector(test)];
-    [learnObj performSelector:@selector(doExcept)];
-#pragma clang diagnostic pop
+//#pragma clang diagnostic push
+//#pragma clang diagnostic ignored "-Warc-performSelector-leaks"
+////    [learnObj performSelector:@selector(test)];
+//    [learnObj performSelector:@selector(doExcept)];
+//#pragma clang diagnostic pop
+//
+    if ([learnObj respondsToSelector:@selector(test)]) {//通过消息转发 resolveInstanceMethod 来返回解决时 会返回YES 其他转发方式会返回NO
+        NSLog(@"respondsToSelector YES");
+    }
     
+    if ([learnObj.class instancesRespondToSelector:@selector(test)]) {
+        NSLog(@"instancesRespondToSelector YES");
+    }
+    
+    if ([DMLearnObject respondsToSelector:@selector(classFunc)]) {
+        NSLog(@"%s",__func__);
+    }
+    
+    if ([DMLearnObject performSelector:@selector(test)]) {
+        NSLog(@"%s",__func__);
+    }
+    
+//    NSObject *objc = [NSObject new];
+//    if ([objc instancesRespondToSelector:@selector(copy)]) {
+//
+//    }
 }
 
 

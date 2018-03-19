@@ -11,4 +11,6 @@
 @interface DMLearnObject : NSObject
 
 - (void)normalInvokeTest;
+
++ (void)classFunc;
 @end

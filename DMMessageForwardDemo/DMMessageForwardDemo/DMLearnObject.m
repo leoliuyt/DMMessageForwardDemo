@@ -25,6 +25,10 @@
     return self;
 }
 
++ (void)classFunc
+{
+    NSLog(@"%s",__func__);
+}
 - (void)normalInvokeTest
 {
     NSLog(@"存在的方法：%s",__FUNCTION__);
@@ -42,14 +46,14 @@
     NSLog(@"%s",__FUNCTION__);
     //不处理 就需要下一步处理
     if (![self respondsToSelector:sel]) {
-//        SEL resolveSel = @selector(resolveMethod);
-//        Method swizzledMethod = class_getInstanceMethod([self class], resolveSel);
-//        BOOL didAddMethod =
-//        class_addMethod([self class],
-//                        sel,
-//                        method_getImplementation(swizzledMethod),
-//                        method_getTypeEncoding(swizzledMethod));
-//        return didAddMethod;
+        SEL resolveSel = @selector(resolveMethod);
+        Method swizzledMethod = class_getInstanceMethod([self class], resolveSel);
+        BOOL didAddMethod =
+        class_addMethod([self class],
+                        sel,
+                        method_getImplementation(swizzledMethod),
+                        method_getTypeEncoding(swizzledMethod));
+        return didAddMethod;
         
 //        //IMP
 //        void(^block)(id s) = ^(id s){
@@ -75,10 +79,10 @@
 {
     NSLog(@"%s",__FUNCTION__);
     //将方法转发给别的对象调用
-//    DMForwardObject *forwardObj = [DMForwardObject new];
-//    if ([forwardObj respondsToSelector:@selector(doExcept)]) {
-//        return forwardObj;
-//    }
+    DMForwardObject *forwardObj = [DMForwardObject new];
+    if ([forwardObj respondsToSelector:@selector(doExcept)]) {
+        return forwardObj;
+    }
     return [super forwardingTargetForSelector:aSelector];
 }
 
